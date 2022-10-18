@@ -8,7 +8,11 @@
           :src="pokemon.sprite"
           :alt="`${pokemon.pokemon_species.name} sprite`"
         />
-        <div>{{ pokemon.pokemon_species.name }}</div>
+        <div>
+          <a :href="`/pokemon/${pokemon.pokemon_species.name}`">{{
+            pokemon.pokemon_species.name
+          }}</a>
+        </div>
       </li>
     </ul>
   </main>

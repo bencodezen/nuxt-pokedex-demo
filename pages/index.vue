@@ -42,9 +42,9 @@ const { data: pokeData } = useAsyncData('pokedex', async () => {
           :alt="`${pokemon.pokemon_species.name} sprite`"
         />
         <div>
-          <a :href="`/pokemon/${pokemon.pokemon_species.name}`">{{
-            pokemon.pokemon_species.name
-          }}</a>
+          <nuxt-link :to="`/pokemon/${pokemon.pokemon_species.name}`">
+            {{ pokemon.pokemon_species.name }}
+          </nuxt-link>
         </div>
       </li>
     </ul>
